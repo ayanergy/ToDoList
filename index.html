@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+
+        <title>To-do List</title>
+        <meta name="description" content="To-do list inspired by design on https://www.figma.com/community/file/1182683143786000762">
+        <meta name="author" content="Ayan Ahmad">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+    
+    <body>
+        
+        <main>
+            
+            <div id = "parentContainer">
+                
+                <div class = box id = "doneBox">
+                    
+                    <div class = "head">
+                        <h1>Done</h1>
+                        <img id = "doneIcon" src="images/doneIcon.png" alt="Done icon">
+                    </div>
+
+                </div>
+                
+                <div class = box id = "activeBox">
+                
+                    <div class = "head">
+                        <h1>To-Do</h1>
+                        <img id = "activeIcon" src="images/activeIcon.png" alt="Active icon">
+                    </div>
+
+                </div>
+
+                <div class = box id = "inputBox">
+                    
+                    <div class = "head">
+                        <h1>Enter</h1>
+                        <img id = "inputIcon" src="images/inputIcon.jpg" alt="Input icon">
+                    </div>
+                        
+                    <form id = "input">
+
+                        <label for="taskInput">Task</label>
+                        <input type="text" id="taskInput" placeholder="What task would you like to add?" required>
+
+                        <label for="categoryInput">Category</label>
+                        <select id="categoryInput">
+                            <option value="Startup">Startup</option>
+                            <option value="Work">Work</option>
+                            <option value="Family">Family</option>
+                            <option value="Hobby">Hobby</option>
+                        </select>
+
+                        <label for="deadlineInput">Deadline</label>
+                        <input type="date" id="deadlineInput" required>
+
+                        <label for="effortInput">Effort required (Low to High)</label>
+                        <input type="range" min="1" max="3" id="effortInput" required>
+
+                        <label for="urgencyInput">Task urgency</label>
+                        <select id="urgencyInput">
+                            <option value="Urgent">Urgent</option>
+                            <option value="Required">Required</option>
+                            <option value="Secondary">Secondary</option>
+                        </select>
+
+                        <button id="addTask"><span>Add task </span></button>
+
+                    </form>
+
+                </div>
+            
+            </div>
+        
+        </main>
+    
+        <script src="toDo.js"></script>
+        
+    </body>
+
+</html>
